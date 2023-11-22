@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    --textColor1: #232e35;
+    --textColor2: #656d72;
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+
+    --backGroundColor1: #fff;
+    --backGroundColor2: #eeecec;
+    --backGroundColor3: #dfdfdf;
+
+    --iconColor: rgb(207, 94, 94);
+    --iconColorHover: #f84343;
+
+    --sectionPadding: 6rem o;
+
+    --itemBorderRadius: .7rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6, strong {
+    color: var(--textColor1);
+}
+
+p {
+    font-size: 1rem; /* 1rem = 16px */
+    line-height: 1,9rem;
+}
+
+p, span, label, input, textarea, li {
+    color: var(--textColor2);
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-contaiter {
+        width: 90%;
+    }    
+}
+
+/* button */
+.btn {
+    padding: 1px;
+    background: white;
+    border: 1.5px dolid var(--borderColor);
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px ;
+}
+
+/* Logo and Navigation menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a {
+    color: var(--textColor1);
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    color: var(--textColor1);
+}
+
+/* burger */
+.burger div {
+    width: 25px;
+    height: 2px;
+    background-color: black;
+    margin: 7px;
+    transition: all .3s;
+    z-index: 99;
+}
+
+.burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;
+}
+
+/* Titles */
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    color: var(--textColor2);
+    position: relative;
+    padding-left: 40px;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: rgb(71, 71, 71);
+    position: absolute;
+    display: block;
+    left: 0;
+}
+
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+/*layout*/
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+
+/* hero section */
+#hero {
+    display: flex;
+    align-items: center;
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 600;
+    margin: .5rem 0 1rem;
+}
+
+.hero-name span {
+    color: var(--iconColor);
+}
+
+.hero-right img {
+    width: 70%;
+    border-radius: 25px;
+    box-shadow: #232e35 2px;
+}
+
+.hero-right {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* portofolio */
+#portofolios {
+    padding: var(--sectionPadding);
+    background-color: var(--backGroundColor2);
+    margin-top: 2rem;
+    padding: 1.5rem;
+}
+
+.portofolio {
+    border-radius: var(--itemBorderRadius);
+    background-color: var(--backGroundColor1);
+    overflow: hidden;
+    border: 1px solid var(--iconColor);
+}
+
+.prtofolio-cover {
+    height: 250px;
+}
+
+.portofolio-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portofolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portofolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portofolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+/* skills*/
+#skills {
+    padding: var(--sectionPadding);
+    background: white;
+    padding-top: 1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr 1fr));
+    gap: 3rem;
+
+}
+
+.education {
+    display: flex;
+    gap: 1rem;
+}
+
+.education .line {
+    padding: 0 .7rem;
+}
+
+.education .line div {
+    width: 2px;
+    height: 100%;
+    background: var(--iconColor);
+    position:relative
+}
+
+.education-info p {
+    margin: .6rem 0 1.4rem;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1rem;
+}
+
+/*contact*/
+#contact {
+    background: var(--backGroundColor3);
+    padding: var(--sectionPadding);
+    padding: 2rem;
+    margin-top: 1.5rem;
+    border-bottom: 3px solid var(--iconColor);
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+}
+
+.contact-right {
+    margin-left: 70px;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: .75rem 1.3rem;
+    background: var(--backGroundColor2);
+    border: 1px solid white;
+    border-radius: 3px;
+    resize: none;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid var(--iconColorHover);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: .75rem 1.3rem;
+    background-color: var(--iconColor);
+    color: aliceblue;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background: var(--iconColorHover);
+}
+
+.contact-item {
+    margin: 3rem 0 1rem;
+    gap: 1.5rem;
+}
+
+.contact-item-detail {
+    padding: 1rem 0;
+}
+
+.contact-item-icon {
+    background: var(--iconColor);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-item-icon svg {
+    fill: aliceblue;
+}
+
+
+
+/* footer */
+footer {
+    background: #f1f1f1dd;
+    padding: .7rem 0;
+
+}
+
+.footer-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icon a {
+    margin: 0 0.5rem;
+    color: black;
+
+}
+
+.footer-icon svg {
+    fill: #656d72;
+}
+
+.footer-icon svg:hover {
+    fill: black;
+}
