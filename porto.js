@@ -1,16 +1,15 @@
-// burger 
+// navigasi
 const navSlide = () => {
-    const burger = document.querySelector(".burger");
-    const navList = document.querySelector("nav");
+    const burger = document.queryselector(".burger");
+    const navLists = document.queryselector("nav");
 
     burger.addEventListener("click", () => {
-        navLists.classList.toggle("nav-active")
-        burger.classList.toggle("toggle-burger")
+        navLists.classList.toggle("nav-active");
+        burger.classList.toggle("toggle-burger");
     });
 };
 
 navSlide();
-
 
 // clear message 
 window.onbeforeunload = () => {

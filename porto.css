@@ -30,6 +30,14 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
+header, #skills {
+    margin: 0 2rem;
+}
+
+#hero {
+    margin-left: 5rem;
+}
+
 h1,h2,h3,h4,h5,h6, strong {
     color: var(--textColor1);
 }
